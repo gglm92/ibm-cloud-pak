@@ -1,0 +1,149 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "Instances",
+      "label": "Instances"
+    },
+    {
+      "name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "label": "Instances - vsphere_virtual_machine.virtual_machine"
+    },
+    {
+      "name": "Other",
+      "label": "Other"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "virtual_machine_name",
+      "label": "Virtual Machine Name",
+      "description": "Virtual machine name for virtual_machine",
+      "type": "string",
+      "default": "",
+      "regex": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_number_of_vcpu",
+      "label": "Virtual Machine Number Of Vcpu",
+      "description": "Number of virtual cpu's.",
+      "type": "string",
+      "default": "",
+      "regex": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_memory",
+      "label": "Virtual Machine Memory",
+      "description": "Memory allocation.",
+      "type": "string",
+      "default": "",
+      "regex": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_disk_name",
+      "label": "Virtual Machine Disk Name",
+      "description": "The name of the disk. Forces a new disk if changed. This should only be a longer path if attaching an external disk.",
+      "type": "string",
+      "default": "",
+      "regex": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_disk_size",
+      "label": "Virtual Machine Disk Size",
+      "description": "The size of the disk, in GiB.",
+      "type": "string",
+      "default": "",
+      "regex": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_template_name",
+      "label": "Virtual Machine Template Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "regex": "",
+      "group_name": "Instances",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_datacenter_name",
+      "label": "Virtual Machine Datacenter Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "regex": "",
+      "group_name": "Other",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_datastore_name",
+      "label": "Virtual Machine Datastore Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "regex": "",
+      "group_name": "Other",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "resource_pool_cluster_name",
+      "label": "Resource Pool Cluster Name",
+      "description": "Cluster name",
+      "type": "string",
+      "default": "",
+      "regex": "",
+      "group_name": "Other",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [ ]
+}
