@@ -49,6 +49,9 @@ resource "vsphere_virtual_machine" "virtual_machine" {
   memory        = var.virtual_machine_memory
   guest_id      = data.vsphere_virtual_machine.virtual_machine_template.guest_id
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
+  scsi_type        = data.vsphere_virtual_machine.virtual_machine_template.scsi_type
+  firmware      = data.vsphere_virtual_machine.virtual_machine_template.firmware
+  wait_for_guest_net_timeout = -1
   
   network_interface {
     network_id   = data.vsphere_network.network.id
@@ -59,12 +62,12 @@ resource "vsphere_virtual_machine" "virtual_machine" {
     template_uuid = data.vsphere_virtual_machine.virtual_machine_template.id
     customize {
         linux_options {
-          host_name = "HostnameModificado"
-          domain    = "mjarquin.com"
+          host_name = var.vm_hostname
+          domain    = var.vm_domain
         }
         network_interface {
-          ipv4_address = "192.168.0.2"
-          ipv4_netmask = 24
+          ipv4_address = var.vm_ipv4_address
+          ipv4_netmask = var.vm_ipv4_netmask
         }
       }
   }

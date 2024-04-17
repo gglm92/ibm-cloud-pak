@@ -54,3 +54,23 @@ variable "nw_name" {
   type = string
 }
 
+variable "vm_hostname" {
+  description = "Hostname de la VM"
+  type = string
+}
+
+variable "vm_domain" {
+  description = "Dominio de la VM"
+  type = string
+}
+
+variable "vm_ipv4_address" {
+  description = "Dirección IP de la VM"
+  type = string
+}
+
+variable "vm_ipv4_netmask" {
+  description = "Máscara de red de la VM"
+  type = string
+}
+
