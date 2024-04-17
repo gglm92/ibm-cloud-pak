@@ -30,17 +30,17 @@ variable "virtual_machine_disk_size" {
 }
 
 variable "virtual_machine_template_name" {
-  type = "string"
+  type = string
   description = "Generated"
 }
 
 variable "virtual_machine_datacenter_name" {
-  type = "string"
+  type = string
   description = "Generated"
 }
 
 variable "virtual_machine_datastore_name" {
-  type = "string"
+  type = string
   description = "Generated"
 }
 
