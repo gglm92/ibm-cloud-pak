@@ -44,8 +44,8 @@ variable "virtual_machine_datastore_name" {
   description = "Generated"
 }
 
-variable "resource_pool_cluster_name" {
+variable "clus_name" {
+  description = "Nombre del Cluster"
   type = string
-  description = "Cluster name"
 }
 

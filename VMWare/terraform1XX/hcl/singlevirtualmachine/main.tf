@@ -9,7 +9,7 @@
 #}
 
 provider "vsphere" {
-  version = "~> 1.24"
+  version = "2.7.0"
   allow_unverified_ssl = true
 }
 
@@ -32,9 +32,9 @@ data "vsphere_datastore" "virtual_machine_datastore" {
   datacenter_id = data.vsphere_datacenter.virtual_machine_datacenter.id
 }
 
-data "vsphere_resource_pool" "resource_pool_cluster" {
-  name          = var.resource_pool_cluster_name
-  datacenter_id = data.vsphere_datacenter.virtual_machine_datacenter_name.id
+data "vsphere_compute_cluster" "cluster" {
+  name          = var.clus_name
+  datacenter_id = data.vsphere_datacenter.virtual_machine_datacenter.id
 }
 
 resource "vsphere_virtual_machine" "virtual_machine" {
@@ -42,8 +42,8 @@ resource "vsphere_virtual_machine" "virtual_machine" {
   datastore_id  = data.vsphere_datastore.virtual_machine_datastore.id
   num_cpus      = var.virtual_machine_number_of_vcpu
   memory        = var.virtual_machine_memory
-  guest_id = data.vsphere_virtual_machine.virtual_machine_template.guest_id
-  resource_pool_id = data.vsphere_resource_pool.resource_pool_cluster.id
+  guest_id      = data.vsphere_virtual_machine.virtual_machine_template.guest_id
+  resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
   clone {
     template_uuid = data.vsphere_virtual_machine.virtual_machine_template.id
   }

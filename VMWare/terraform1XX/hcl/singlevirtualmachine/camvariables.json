@@ -131,13 +131,13 @@
       "immutable_after_create": false
     },
     {
-      "name": "resource_pool_cluster_name",
-      "label": "Resource Pool Cluster Name",
-      "description": "Cluster name",
+      "name": "clus_name",
+      "label": "Clus Name",
+      "description": "Nombre del Cluster",
       "type": "string",
       "default": "",
       "regex": "",
-      "group_name": "Other",
+      "group_name": "",
       "required": true,
       "secured": false,
       "hidden": false,
