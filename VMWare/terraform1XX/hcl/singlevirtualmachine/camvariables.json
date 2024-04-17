@@ -143,6 +143,20 @@
       "hidden": false,
       "immutable": false,
       "immutable_after_create": false
+    },
+    {
+      "name": "nw_name",
+      "label": "Nw Name",
+      "description": "Nombre de la Network",
+      "type": "string",
+      "default": "",
+      "regex": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
     }
   ],
   "template_output_params": [ ]

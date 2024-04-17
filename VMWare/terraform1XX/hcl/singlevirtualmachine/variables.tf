@@ -49,3 +49,8 @@ variable "clus_name" {
   type = string
 }
 
+variable "nw_name" {
+  description = "Nombre de la Network"
+  type = string
+}
+
