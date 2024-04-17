@@ -10,6 +10,7 @@
 
 provider "vsphere" {
   version = "~> 1.24"
+  allow_unverified_ssl = true
 }
 
 
